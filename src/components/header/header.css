@@ -1,0 +1,31 @@
+.nav-con{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 120px 20px 120px;
+    box-Shadow: 5px -5px 10px #8888;
+    background-color: #fff;
+}
+/* .header-left{
+} */
+.header-right{
+    display: flex;
+    align-items: center;
+}
+
+.nav-links{
+    padding: 0px 25px;
+    font-size: 19px;
+    font-weight: 500;
+    color: rgba(15, 14, 14, 0.533);
+}
+.nav-btn{
+    border: none;
+    background-color: darkgreen;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 0px 0px 15px 25px;
+}
