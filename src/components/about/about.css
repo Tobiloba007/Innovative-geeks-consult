@@ -2,6 +2,7 @@
     background: url("https://cdn.pixabay.com/photo/2019/11/08/18/16/london-4612015__340.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+    background-size: 100vw 55rem;
 }
 .about-heading{
     display: flex;
@@ -34,9 +35,9 @@
     justify-content: space-between;
     background-color: white;
     width: 25rem;
-    height: 18rem;
+    height: 20rem;
     border-radius: 3px;
-    padding: 0px 35px 0px 15px;
+    padding: 0px 15px 0px 15px;
     margin: 0px 50px;
 }
 .box-2{
@@ -44,7 +45,7 @@
 }
 .box-number{
     font-size: 37px;
-    padding: 10px 15px 0px 0px;
+    padding: 13px 10px 0px 0px;
     color: darkgreen;
 }
 /* .box-title{
@@ -55,7 +56,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 .box-title{
     font-size: 22px;
@@ -69,8 +70,9 @@
     text-decoration: underline;
     text-underline-offset: 2px;
     color: darkgreen;
+    font-size: 15px;
     margin-left: 150px;
-    margin-bottom: 15px;
+    margin-top: 10px;
 }
 
 .about-btm-heading{
@@ -109,6 +111,9 @@
 .tour-card-img{
     border-radius: 5px;
 }
+:hover.tour-card-img{
+    filter: brightness(50%);
+}
 .tour-card-content{
     margin: 0px 0px 0px 50px;
 }
@@ -123,4 +128,302 @@
     border-radius: 5px;
     padding: 10px 20px;
     margin-top: 15px;
+}
+
+
+@media (max-width: 768px) {
+    .about-top{
+        background: url("https://cdn.pixabay.com/photo/2019/11/08/18/16/london-4612015__340.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-size: 100vw 55rem;
+    }
+    .about-heading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 70px;
+    }
+    .about-heading-1{
+        color: #ffff;
+        font-size: 33px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .about-heading-2{
+        color: #ffff;
+        font-size: 17px;
+        font-weight: 300;
+        width: 65vw;
+        text-align: center;
+    }
+    .about-content{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 60px;
+        margin: 40px 10px 0px 10px;
+    }
+    .box{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        background-color: white;
+        width: 20rem;
+        height: 15.5rem;
+        border-radius: 3px;
+        padding: 0px 15px 0px 15px;
+        margin: 0px 25px;
+    }
+    .box-2{
+        margin-top: 0rem;
+    }
+    .box-3{
+        margin-top: 3rem;
+    }
+    .box-number{
+        font-size: 27px;
+        padding: 20px 8px 0px 0px;
+        color: darkgreen;
+    }
+    /* .box-title{
+        text-align: left;
+    } */
+    .box-content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .box-title{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .box-words{
+        font-size: 14px;
+        margin-top: -10px;
+    }
+    .box-link{
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        color: darkgreen;
+        font-size: 14px;
+        margin-left: 150px;
+        margin-top: 10px;
+    }
+    
+    .about-btm-heading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 75px;
+    }
+    .btm-heading-1{
+        font-size: 33px;
+    }
+    .btm-heading-2{
+        text-align: center;
+        width: 70vw;
+        font-size: 16px;
+        padding: 5px 0px;
+    }
+    .about-btm-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 25px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    .tour-card{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 10px solid #0000;
+        box-Shadow: 0px 5px 20px #8888;
+        border-radius: 5px;
+        margin-bottom: 40px;
+    }
+    .tour-card-img{
+        border-radius: 5px;
+        width: 250px;
+        height: 250px;
+    }
+    :hover.tour-card-img{
+        filter: brightness(50%);
+    }
+    .tour-card-content{
+        margin: 0px 30px 0px 30px;
+    }
+    .tour-card-title{
+        font-size: 20px;
+        padding: 20px 0px 0px 0px;
+    }
+    .tour-card-words{
+        font-size: 15px;
+        margin: 10px 0px;
+    }
+    .tour-card-btn{
+        color: #ffff;
+        background-color: darkgreen;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 15px;
+        margin-top: 10px;
+        font-size: 13px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .about-top{
+        background: url("https://cdn.pixabay.com/photo/2019/11/08/18/16/london-4612015__340.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-size: 100vw 72rem;
+    }
+    .about-heading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+    .about-heading-1{
+        color: #ffff;
+        font-size: 27px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .about-heading-2{
+        color: #ffff;
+        font-size: 17px;
+        font-weight: 300;
+        width: 90vw;
+        text-align: center;
+    }
+    .about-content{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 60px;
+        margin: 35px 10px 0px 10px;
+    }
+    .box{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        background-color: white;
+        width: 18.5rem;
+        height: 15.5rem;
+        border-radius: 3px;
+        padding: 0px 15px 0px 15px;
+        margin: 20px 25px;
+    }
+    .box-2{
+        margin-top: 0rem;
+    }
+    .box-3{
+        margin-top: 0rem;
+    }
+    .box-number{
+        font-size: 27px;
+        padding: 20px 8px 0px 0px;
+        color: darkgreen;
+    }
+    /* .box-title{
+        text-align: left;
+    } */
+    .box-content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .box-title{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .box-words{
+        font-size: 14px;
+        margin-top: -10px;
+    }
+    .box-link{
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        color: darkgreen;
+        font-size: 14px;
+        margin-left: 120px;
+        margin-top: 10px;
+    }
+    
+    .about-btm-heading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .btm-heading-1{
+        font-size: 27px;
+        font-weight: 400;
+    }
+    .btm-heading-2{
+        text-align: center;
+        width: 90vw;
+        font-size: 16px;
+        padding: 5px 0px;
+    }
+    .about-btm-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 10px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .tour-card{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 10px solid #0000;
+        box-Shadow: 0px 5px 20px #8888;
+        border-radius: 5px;
+        margin-bottom: 25px;
+    }
+    .tour-card-img{
+        border-radius: 4px;
+        width: 175px;
+        height: 200px;
+    }
+    :hover.tour-card-img{
+        filter: brightness(50%);
+    }
+    .tour-card-content{
+        margin: 0px 10px 0px 20px;
+    }
+    .tour-card-title{
+        font-size: 17px;
+        padding: 10px 0px 0px 0px;
+    }
+    .tour-card-words{
+        font-size: 12px;
+        margin: -5px 0px 0px 0px;
+    }
+    .tour-card-btn{
+        color: #ffff;
+        background-color: darkgreen;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 15px;
+        margin-top: 5px;
+        font-size: 11px;
+    }
 }

@@ -1,5 +1,7 @@
 import React from 'react'
 import './about.css'
+import { motion } from 'framer-motion'
+
 
 const About = () => {
   return (
@@ -42,6 +44,8 @@ const About = () => {
             </div>
 
         </div>
+
+
         <div className="about-btm">
 
             <div className="about-btm-heading">
@@ -51,33 +55,65 @@ const About = () => {
 
             <div className="about-btm-content">
 
-                <div className='tour-card'>
+                <motion.div 
+                whileHover={{
+                    scale: 1.02,
+                    transition: { duration: 0.4 },
+                  }}
+                className='tour-card'>
                     <img className='tour-card-img'
                     src="https://cdn.pixabay.com/photo/2014/08/24/14/39/girls-426382__340.jpg" alt="" />
                     <div className='tour-card-content'>
                         <h3 className='tour-card-title'>Group holidays package</h3>
                         <p className='tour-card-words'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est veritatis commodi accusantium quisquam qui voluptate, saepe natus! Dicta, sequi aliquam.</p>
-                        <button className='tour-card-btn'>BOOK NOW</button>
+                        <motion.button 
+                        whileHover={{
+                            scale: 1.02,
+                            transition: { duration: 0.4 },
+                          }} whileTap={{ scale: 1.05 }}
+                        className='tour-card-btn'>BOOK NOW</motion.button>
                     </div>
-                </div>
-                <div className='tour-card'>
+                </motion.div>
+
+                <motion.div
+                whileHover={{
+                    scale: 1.02,
+                    transition: { duration: 0.4 },
+                  }} 
+                className='tour-card'>
                     <div className='tour-card-content'>
                         <h3 className='tour-card-title'>Family Tours</h3>
-                        <p className='tour-card-words'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est veritatis commodi accusantium quisquam qui voluptate, saepe natus! Dicta, sequi aliquam.</p>
-                        <button className='tour-card-btn'>BOOK NOW</button>
+                        <p className='tour-card-words tour-card-words-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est veritatis commodi accusantium quisquam qui voluptate, saepe natus! Dicta, sequi aliquam.</p>
+                        <motion.button 
+                        whileHover={{
+                            scale: 1.04,
+                            transition: { duration: 0.4 },
+                          }}whileTap={{ scale: 1.05 }}
+                        className='tour-card-btn'>BOOK NOW</motion.button>
                     </div>
                     <img className='tour-card-img'
                     src="https://cdn.pixabay.com/photo/2018/04/09/10/03/zermatt-3303684__340.jpg" alt="" />
-                </div>
-                <div className='tour-card'>
+                </motion.div>
+
+                <motion.div 
+                whileHover={{
+                    scale: 1.04,
+                    transition: { duration: 0.4 },
+                  }}
+                className='tour-card'>
                     <img className='tour-card-img'
                     src="https://cdn.pixabay.com/photo/2017/05/12/21/44/couple-2308244__340.jpg" alt="" />
                     <div className='tour-card-content'>
                         <h3 className='tour-card-title'>Couple Tours </h3>
                         <p className='tour-card-words'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est veritatis commodi accusantium quisquam qui voluptate, saepe natus! Dicta, sequi aliquam.</p>
-                        <button className='tour-card-btn'>BOOK NOW</button>
+                        <motion.button 
+                        whileHover={{
+                            scale: 1.04,
+                            transition: { duration: 0.4 },
+                          }}whileTap={{ scale: 1.05 }}
+                        className='tour-card-btn'>BOOK NOW</motion.button>
                     </div>
-                </div>
+                </motion.div>
 
             </div>
         </div>

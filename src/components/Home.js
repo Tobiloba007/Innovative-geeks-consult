@@ -8,15 +8,15 @@ import Section2 from './Section2/Section2'
 
 const Home = () => {
   return (
-    <div>
+    <>
         <Header />
         <Intro />
         <Section2 />
         <About />
         <Reviews />
         <Footer />
-    </div>
-  )
+    </>
+    )
 }
 
 export default Home
