@@ -7,7 +7,7 @@ const Reviews = () => {
   return (
     <div className='reviews-con'>
         <div className="reviews-top">
-            <h1>Our Customer Reviews</h1>
+            <h1 className='rev-title'>Our Customer Reviews</h1>
         </div>
 
         <div className="reviews-btm">

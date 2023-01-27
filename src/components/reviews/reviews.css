@@ -82,3 +82,191 @@
     padding: 15px 0px 0px 10px;
     font-size: 45px;
 }
+
+@media (max-width: 768px) {
+    .reviews-con{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: aliceblue;
+        padding-bottom: 2rem;
+    }
+    .reviews-top{
+        font-size: 20px;
+        margin: 70px 0px 0px 0px;
+    }
+    .rev-title{
+        font-size: 27px;
+        margin-top: -20px;
+    }
+    .review-inner-carousel{
+        height: 37.8vh;
+    }
+    .review-div{
+        margin: 0px 50px;
+    }
+    .review-words{
+        margin-top: -5px;
+        font-size: 16px;
+        text-align: center;
+        font-style: italic;
+    }
+    .carousel-control-prev-icon-1{
+      height: 50px;
+      width: 50px;
+      outline: black;
+      background-size: 50%, 50%;
+      border-radius: 50%;
+      border: 1px solid black;
+      background-image: none;
+      position: absolute;
+      margin-top: -12rem;
+      margin-left: -1rem;
+    }
+    .carousel-control-next-icon-2{
+      height: 50px;
+      width: 50px;
+      outline: black;
+      background-size: 50%, 50%;
+      border-radius: 50%;
+      border: 1px solid black;
+      background-image: none;
+      margin-left: 40rem;
+      margin-top: -12rem;
+      position: absolute;
+    }
+    
+    .carousel-control-next-icon-2:after
+    {
+      content: '>';
+      font-size: 35px;
+      color: darkgreen;
+    }
+    
+    .carousel-control-prev-icon-1:after {
+      content: '<';
+      font-size: 35px;
+      color: darkgreen;
+    }
+    
+    .reviews-contact{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0rem 9.5rem;
+        margin-bottom: 0rem;
+    }
+    .review-img{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .review-name{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .quote-left{
+        padding: 0px 10px 20px 0px;
+        font-size: 45px;
+    }
+    .quote-right{
+        padding: 15px 0px 0px 10px;
+        font-size: 45px;
+    }
+}
+@media (max-width: 480px) {
+    .reviews-con{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: aliceblue;
+        padding-bottom: 0rem;
+    }
+    .reviews-top{
+        margin: 70px 0px 0px 0px;
+    }
+    .rev-title{
+        font-size: 23px;
+        margin-top: -22px;
+    }
+    .review-inner-carousel{
+        height: 39vh;
+    }
+    .review-div{
+        margin: 0px 50px;
+    }
+    .review-words{
+        margin-top: 15px;
+        font-size: 14px;
+        text-align: center;
+        font-style: italic;
+    }
+    .carousel-control-prev-icon-1{
+      height: 50px;
+      width: 50px;
+      outline: black;
+      background-size: 50%, 50%;
+      border-radius: 50%;
+      border: 1px solid black;
+      background-image: none;
+      position: absolute;
+      margin-top: -12rem;
+      margin-left: -1rem;
+      display: none;
+    }
+    .carousel-control-next-icon-2{
+      height: 50px;
+      width: 50px;
+      outline: black;
+      background-size: 50%, 50%;
+      border-radius: 50%;
+      border: 1px solid black;
+      background-image: none;
+      margin-left: 40rem;
+      margin-top: -12rem;
+      position: absolute;
+      display: none;
+    }
+    
+    .carousel-control-next-icon-2:after
+    {
+      content: '>';
+      font-size: 35px;
+      color: darkgreen;
+    }
+    
+    .carousel-control-prev-icon-1:after {
+      content: '<';
+      font-size: 35px;
+      color: darkgreen;
+    }
+    
+    .reviews-contact{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0rem 2.5rem;
+        margin-bottom: 0rem;
+    }
+    .review-img{
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .review-name{
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .quote-left{
+        padding: 0px 10px 20px 0px;
+        font-size: 45px;
+    }
+    .quote-right{
+        padding: 15px 0px 0px 10px;
+        font-size: 45px;
+    }
+}

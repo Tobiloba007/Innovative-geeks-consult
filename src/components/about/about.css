@@ -415,6 +415,7 @@
     }
     .tour-card-words{
         font-size: 12px;
+        width: 95%;
         margin: -5px 0px 0px 0px;
     }
     .tour-card-btn{

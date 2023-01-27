@@ -49,3 +49,111 @@
 .footer-bumbum-divider{
     font-size: 18px;
 }
+
+
+@media (max-width: 768px) {
+    .footer-con{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px 20px 20px 20px;
+        background-color: darkblue;
+        color: #ffff;
+    }
+    .footer-title{
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+    .title-socials{
+        text-align: center;
+    }
+    .footer-li-div{
+        margin-top: -10px;
+        margin-left: -20px;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+    .socials{
+        margin-top: -45px;
+    }
+    .footer-socials{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 50px;
+    }
+    .footer-socials-li{
+        padding: 0px 12px;
+    }
+    .footer-bumbum{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        background-color: aliceblue;
+    }
+    .footer-bumbum-words{
+        font-size: 13px;
+    }
+    .footer-bumbum-divider{
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .footer-con{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 40px 20px 10px 20px;
+        background-color: darkblue;
+        color: #ffff;
+    }
+    .footer-title{
+        font-size: 13px;
+        font-weight: 400;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+    .title-socials{
+        text-align: center;
+    }
+    .footer-li-div{
+        margin-top: -10px;
+        margin-left: -20px;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+    .socials{
+        margin: 0px 55px 0px 55px;
+    }
+    .footer-socials{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 60px;
+        margin-top: -15px;
+    }
+    .footer-socials-li{
+        padding: 0px 18px;
+    }
+    .footer-bumbum{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        background-color: aliceblue;
+    }
+    .footer-bumbum-words{
+        font-size: 13px;
+    }
+    .footer-bumbum-divider{
+        font-size: 15px;
+    }
+}

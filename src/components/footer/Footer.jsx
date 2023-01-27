@@ -41,7 +41,7 @@ const Footer = () => {
         <div className='footer-bumbum'>
             <p className='footer-bumbum-words'>© 2023 Innovative Geeks Consult</p>
             <p className='footer-bumbum-divider'><RxDividerVertical /></p> 
-            <p>All RIghts Reserved</p>
+            <p className='footer-bumbum-words'>All RIghts Reserved</p>
         </div>
 
     </div>
