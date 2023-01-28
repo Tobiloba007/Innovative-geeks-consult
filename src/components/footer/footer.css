@@ -37,7 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 15px;
+    padding-top: 15px;
     background-color: aliceblue;
 }
 .footer-bumbum-divider{
@@ -110,7 +110,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        padding: 40px 20px 10px 20px;
+        padding: 40px 20px 0px 20px;
         background-color: darkblue;
         color: #ffff;
     }
@@ -147,7 +147,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 15px;
         background-color: aliceblue;
     }
     .footer-bumbum-words{

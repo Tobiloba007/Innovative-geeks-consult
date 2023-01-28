@@ -2,6 +2,7 @@ import React from 'react'
 import './header.css'
 import { motion } from 'framer-motion'
 import { RxHamburgerMenu } from 'react-icons/rx'
+import { Link } from 'react-router-dom'
 
 
 const Header = () => {
@@ -12,10 +13,10 @@ const Header = () => {
             <h1>GEEKS LOGO</h1>
         </div>
         <div className="header-right">
-            <p className='nav-links'>HOME</p>
-            <p className='nav-links'>ABOUT US</p>
-            <p className='nav-links'>SERVICES</p>
-            <p className='nav-links'>GALLERY</p>
+            <Link to='/' className='nav-links'>HOME</Link>
+            <Link to='/about' className='nav-links'>ABOUT US</Link>
+            <a href='#' className='nav-links'>SERVICES</a>
+            <a href='#' className='nav-links'>GALLERY</a>
             <motion.button 
              whileHover={{
               scale: 1.1,
@@ -39,19 +40,19 @@ const Header = () => {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav nav-links-div">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <Link to='/' className='nav-link'>HOME</Link>
           <hr className='hr-line'/>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+        <Link to='/about' className='nav-link'>ABOUT US</Link>
           <hr className='hr-line'/>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+        <a href='#' className='nav-link'>SERVICES</a>
           <hr className='hr-line'/>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="#">Gallery</a>
+        <a href='#' className='nav-link'>GALLERY</a>
         <hr className='hr-line'/>
         </li>
         <li class="nav-item">

@@ -1,0 +1,199 @@
+.aboutIntro-con{
+    background-color: aliceblue;
+    padding: 100px 0px;
+}
+.aboutIntro-div-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.aboutIntro-title{
+    color: #ffff;
+    background-color: darkblue;
+    padding: 20px 70px;
+    border-radius: 50px;
+    box-Shadow: 5px 10px 10px #8888;
+    font-size: 27px;
+    margin-bottom: 30px;
+}
+.aboutIntro-words{
+    text-align: center;
+    width: 60vw;
+    font-size: 22px;
+}
+.aboutIntro-div2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+.mission-con{
+    width: 85vw;
+}
+.mission-title{
+    margin-left: 100px;
+    color: darkblue;
+}
+.mission-icon{
+    color: rgb(48, 48, 48);
+    padding-left: 20px;
+    margin-bottom: 17px;
+    font-size: 70px;
+}
+.mission{
+    border: 3px;
+    border-radius: 100px;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: -20px;
+    box-Shadow: 5px 10px 10px #8888;
+    background-color:  rgb(182, 216, 245);
+}
+.mission-words{
+    width: 90%;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .aboutIntro-con{
+        background-color: aliceblue;
+        padding: 70px 0px;
+    }
+    .aboutIntro-div-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .aboutIntro-title{
+        color: #ffff;
+        background-color: darkblue;
+        padding: 10px 40px;
+        border-radius: 50px;
+        box-Shadow: 5px 10px 10px #8888;
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    .aboutIntro-words{
+        text-align: center;
+        width: 70vw;
+        font-size: 16px;
+    }
+    .aboutIntro-div2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+    }
+    .mission-con{
+        width: 85vw;
+    }
+    .mission-title{
+        margin-left: 100px;
+        font-size: 19px;
+        color: darkblue;
+    }
+    .mission-icon{
+        color: rgb(48, 48, 48);
+        padding-left: 20px;
+        margin-bottom: 9px;
+        font-size: 45px;
+    }
+    .mission{
+        border: 3px;
+        border-radius: 100px;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: -20px;
+        box-Shadow: 5px 10px 10px #8888;
+        padding-top: 15px;
+        background-color:  rgb(182, 216, 245);
+    }
+    .mission-words{
+        width: 90%;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .aboutIntro-con{
+        background-color: aliceblue;
+        padding: 80px 0px 50px 0px;
+    }
+    .aboutIntro-div-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .aboutIntro-title{
+        color: #ffff;
+        background-color: darkblue;
+        padding: 10px 40px;
+        border-radius: 50px;
+        box-Shadow: 5px 10px 10px #8888;
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    .aboutIntro-words{
+        text-align: center;
+        width: 90vw;
+        font-size: 16px;
+    }
+    .aboutIntro-div2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .mission-con{
+        width: 90vw;
+        margin-bottom: 25px;
+    }
+    .mission-title{
+        margin-left: 30px;
+        font-size: 19px;
+        color: darkblue;
+    }
+    .mission-icon{
+        color: rgb(48, 48, 48);
+        padding-left: 10px;
+        margin-bottom: 9px;
+        font-size: 40px;
+    }
+    .mission{
+        border: 3px;
+        border-radius: 30px;
+        height: 16rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: -20px;
+        box-Shadow: 5px 10px 10px #8888;
+        padding-top: 15px;
+        background-color:  rgb(182, 216, 245);
+    }
+    .mission-words{
+        width: 90%;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+    }
+}
