@@ -400,14 +400,14 @@
     }
     .tour-card-img{
         border-radius: 4px;
-        width: 175px;
-        height: 200px;
+        width: 100px;
+        height: 120px;
     }
     :hover.tour-card-img{
         filter: brightness(50%);
     }
     .tour-card-content{
-        margin: 0px 10px 0px 20px;
+        margin: 0px 2px 0px 8px;
     }
     .tour-card-title{
         font-size: 17px;
@@ -415,8 +415,8 @@
     }
     .tour-card-words{
         font-size: 12px;
-        width: 95%;
-        margin: -5px 0px 0px 0px;
+        width: 100%;
+        margin: -7px 0px 0px 0px;
     }
     .tour-card-btn{
         color: #ffff;
