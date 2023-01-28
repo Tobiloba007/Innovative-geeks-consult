@@ -147,20 +147,20 @@
         margin-bottom: 0px;
     }
     .member-img{
-        height: 15rem;
+        height: 12rem;
         width: 9rem;
         object-fit: cover;
         border: 4px solid darkgreen;
         border-radius: 80px;
     }
     .member-name{
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 600;
         margin-top: 15px;
         text-align: center;
     }
     .member-position{
-        font-size: 16px;
+        font-size: 14px;
         margin-top: -18px;
         text-align: center;
     }
