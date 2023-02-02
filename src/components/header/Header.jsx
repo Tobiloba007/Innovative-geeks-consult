@@ -15,8 +15,8 @@ const Header = () => {
         <div className="header-right">
             <Link to='/' className='nav-links'>HOME</Link>
             <Link to='/about' className='nav-links'>ABOUT US</Link>
-            <a href='#' className='nav-links'>SERVICES</a>
-            <a href='#' className='nav-links'>GALLERY</a>
+            <Link to='/services' className='nav-links'>SERVICES</Link>
+            <a href='#' className='nav-links'>BLOG</a>
             <motion.button 
              whileHover={{
               scale: 1.1,
@@ -24,7 +24,9 @@ const Header = () => {
             }}
             whileTap={{ scale: 1 }}
             className='nav-btn'>
-              CONTACT US
+              <Link className="btn-link" to='/contact'>
+                  CONTACT US
+              </Link>
             </motion.button>
         </div>
     </div>
@@ -48,15 +50,19 @@ const Header = () => {
           <hr className='hr-line'/>
         </li>
         <li class="nav-item">
-        <a href='#' className='nav-link'>SERVICES</a>
+        <Link to='/services' className='nav-link'>SERVICES</Link>
           <hr className='hr-line'/>
         </li>
         <li class="nav-item">
-        <a href='#' className='nav-link'>GALLERY</a>
+        <a href='#' className='nav-link'>BLOG</a>
         <hr className='hr-line'/>
         </li>
         <li class="nav-item">
-        <button className='nav-btn'>Contact Us</button>
+        <button className='nav-btn'>
+          <Link className="btn-link" to='/contact'>
+              Contact Us
+          </Link>
+          </button>
         </li>
       </ul>
     </div>

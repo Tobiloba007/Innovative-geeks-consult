@@ -92,7 +92,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 15px;
+        padding-top: 10px;
         background-color: aliceblue;
     }
     .footer-bumbum-words{
