@@ -6,6 +6,7 @@ import london from '../../assets/london2.jpg'
 import paris from '../../assets/paris6.jpg'
 import liberty from '../../assets/liberty1.jpg'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 
 
@@ -49,8 +50,9 @@ const Intro = () => {
                       transition: { duration: 0.4 },
                     }}
                     whileTap={{ scale: 1 }}
+                    to='/contact'
                      className='intro-btn'>
-                      CONTACT US
+                      <Link className='intro-btn' to='/contact'>CONTACT US</Link>
                       </motion.button>
 
                       </motion.div>

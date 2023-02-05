@@ -21,6 +21,10 @@
     font-size: 18px;
     line-height: 40px;
 }
+.link-list{
+    text-decoration: none;
+    color: #ffff;
+}
 .socials{
     margin-top: -45px;
 }

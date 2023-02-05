@@ -7,7 +7,7 @@ import img4 from '../../assets/services4.jpg'
 import img5 from '../../assets/services5.jpg'
 import img6 from '../../assets/services6.jpg'
 import { motion } from 'framer-motion'
-
+import { Link } from 'react-router-dom'
 
 
 const Section2 = () => {
@@ -40,7 +40,11 @@ const Section2 = () => {
                     scale: 1.05,
                     transition: { duration: 0.4 },
                   }}
-                className='card-btn'>LEARN MORE</motion.button>
+                className='card-btn'>
+                  <Link className='card-btn-link' to='/services'>
+                      LEARN MORE
+                  </Link>
+                  </motion.button>
                 </div>
             </motion.div>
             
@@ -64,7 +68,9 @@ const Section2 = () => {
                     scale: 1.05,
                     transition: { duration: 0.4 },
                   }}
-                className='card-btn'>LEARN MORE</motion.button>
+                className='card-btn'><Link className='card-btn-link' to='/services'>
+                LEARN MORE
+            </Link></motion.button>
                 </div>
             </motion.div>
 
@@ -88,7 +94,9 @@ const Section2 = () => {
                     scale: 1.05,
                     transition: { duration: 0.4 },
                   }}
-                className='card-btn'>LEARN MORE</motion.button>
+                className='card-btn'><Link className='card-btn-link' to='/services'>
+                LEARN MORE
+            </Link></motion.button>
                 </div>
             </motion.div>
 
@@ -112,7 +120,9 @@ const Section2 = () => {
                     scale: 1.05,
                     transition: { duration: 0.4 },
                   }}
-                 className='card-btn'>LEARN MORE</motion.button>
+                 className='card-btn'><Link className='card-btn-link' to='/services'>
+                 LEARN MORE
+             </Link></motion.button>
                 </div>
             </motion.div>
 
@@ -136,7 +146,9 @@ const Section2 = () => {
                     scale: 1.05,
                     transition: { duration: 0.4 },
                   }}
-                className='card-btn'>LEARN MORE</motion.button>
+                className='card-btn'><Link className='card-btn-link' to='/services'>
+                LEARN MORE
+            </Link></motion.button>
                 </div>
             </motion.div>
 
@@ -160,7 +172,9 @@ const Section2 = () => {
                     scale: 1.05,
                     transition: { duration: 0.4 },
                   }}
-                 className='card-btn'>LEARN MORE</motion.button>
+                 className='card-btn'><Link className='card-btn-link' to='/services'>
+                 LEARN MORE
+             </Link></motion.button>
                 </div>
             </motion.div>
 

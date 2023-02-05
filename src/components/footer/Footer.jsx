@@ -5,6 +5,7 @@ import {BsInstagram} from 'react-icons/bs'
 import {IoLogoTwitter} from 'react-icons/io' 
 import {AiFillFacebook} from 'react-icons/ai' 
 import {RxDividerVertical} from 'react-icons/rx' 
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -21,10 +22,10 @@ const Footer = () => {
         <div className="links">
             <p className='footer-title'>LINKS</p>
             <ul className='footer-li-div'>
-                <li>ABOUT US</li>
-                <li>BLOG</li>
-                <li>SERVICES</li>
-                <li>CONTACT US</li>
+                <li><Link className='link-list' to='/about'>ABOUT US</Link></li>
+                <li><a className='link-list' target="_blank" rel="noreferrer" href='https://medium.com/'>BLOG</a></li>
+                <li><Link className='link-list' to='/services'>SERVICES</Link></li>
+                <li><Link className='link-list' to='/contact'>CONTACT US</Link></li>
             </ul>
         </div>
         <div className="socials">

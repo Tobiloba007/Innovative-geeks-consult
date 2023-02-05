@@ -1,6 +1,7 @@
 import React from 'react'
 import './about.css'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 
 const About = () => {
@@ -19,7 +20,11 @@ const About = () => {
                     <div className="box-content">
                         <p className='box-title'>Lorem ipsum dolor</p>
                         <p className='box-words'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero amet porro voluptates non blanditiis earum unde rerum atque debitis deleniti suscipit enim,</p>
-                        <p className='box-link'>Learn more</p>
+                        <p className='box-link'>
+                            <Link className='box-link-btn' to='/about'>
+                              Learn more
+                            </Link>
+                        </p>
                     </div>
                 </div>
 
@@ -28,7 +33,11 @@ const About = () => {
                     <div className="box-content">
                         <p className='box-title'>Lorem ipsum dolor</p>
                         <p className='box-words'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero amet porro voluptates non blanditiis earum unde rerum atque debitis deleniti suscipit enim,</p>
-                        <p className='box-link'>Learn more</p>
+                        <p className='box-link'>
+                        <Link className='box-link-btn' to='/about'>
+                              Learn more
+                        </Link>
+                        </p>
                     </div>
                 </div>
 
@@ -37,7 +46,11 @@ const About = () => {
                     <div className="box-content">
                         <p className='box-title'>Lorem ipsum dolor</p>
                         <p className='box-words'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero amet porro voluptates non blanditiis earum unde rerum atque debitis deleniti suscipit enim,</p>
-                        <p className='box-link'>Learn more</p>    
+                        <p className='box-link'>
+                        <Link className='box-link-btn' to='/about'>
+                              Learn more
+                        </Link>
+                        </p>    
                     </div>
                 </div>
 
@@ -71,7 +84,11 @@ const About = () => {
                             scale: 1.02,
                             transition: { duration: 0.4 },
                           }} whileTap={{ scale: 1.05 }}
-                        className='tour-card-btn'>BOOK NOW</motion.button>
+                        className='tour-card-btn'>
+                            <Link className='tour-card-btn-link' to='/travel'>
+                                BOOK NOW
+                            </Link>
+                        </motion.button>
                     </div>
                 </motion.div>
 
@@ -89,7 +106,11 @@ const About = () => {
                             scale: 1.04,
                             transition: { duration: 0.4 },
                           }}whileTap={{ scale: 1.05 }}
-                        className='tour-card-btn'>BOOK NOW</motion.button>
+                        className='tour-card-btn'>
+                            <Link className='tour-card-btn-link' to='/travel'>
+                                BOOK NOW
+                            </Link>
+                        </motion.button>
                     </div>
                     <img className='tour-card-img'
                     src="https://cdn.pixabay.com/photo/2018/04/09/10/03/zermatt-3303684__340.jpg" alt="" />
@@ -111,7 +132,11 @@ const About = () => {
                             scale: 1.04,
                             transition: { duration: 0.4 },
                           }}whileTap={{ scale: 1.05 }}
-                        className='tour-card-btn'>BOOK NOW</motion.button>
+                        className='tour-card-btn'>
+                            <Link className='tour-card-btn-link' to='/travel'>
+                                BOOK NOW
+                            </Link>
+                        </motion.button>
                     </div>
                 </motion.div>
 

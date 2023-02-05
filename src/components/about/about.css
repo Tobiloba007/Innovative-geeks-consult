@@ -74,7 +74,10 @@
     margin-left: 150px;
     margin-top: 10px;
 }
-
+.box-link-btn{
+    text-decoration: none;
+    color: darkgreen;
+}
 .about-btm-heading{
     display: flex;
     flex-direction: column;
@@ -128,6 +131,10 @@
     border-radius: 5px;
     padding: 10px 20px;
     margin-top: 15px;
+}
+.tour-card-btn-link{
+    text-decoration: none;
+    color: #ffff;
 }
 
 
