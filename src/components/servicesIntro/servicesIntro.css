@@ -38,6 +38,7 @@
     font-size: 20px;
     border-radius: 5PX;
     margin-top: 50px;
+    text-decoration: none;
 }
 .main-services{
     margin: 170px 0px 90px 0px;
@@ -86,6 +87,11 @@
     font-size: 20px;
     border-radius: 5px;
     margin-top: 15px;
+    text-decoration: none;                              
+}
+.services-main-btn-link{
+    color: #ffff;
+    text-decoration: none;
 }
 
 
@@ -179,6 +185,7 @@
         border-radius: 5px;
         margin-top: 0px;
         margin-bottom: 10px;
+        text-decoration: none;
     }
 }
 
@@ -277,5 +284,6 @@
         border-radius: 5px;
         margin-top: 3px;
         margin-bottom: 10px;
+        text-decoration: none;
     }
 }

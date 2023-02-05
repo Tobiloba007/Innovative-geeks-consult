@@ -9,6 +9,11 @@
 }
 /* .header-left{
 } */
+.nav-logo{
+    height: 150px;
+    width: 175px;
+    margin-left: -20px;
+}
 .header-right{
     display: flex;
     align-items: center;
@@ -46,6 +51,11 @@
     .boot-nav{
         display: unset;
     }
+    .navbar-brand{
+        height: 75px;
+        width: 100px;
+        margin-left: 20px;
+    }
     .navbar-toggler{
         padding: 0px 0px 0px 0px;
     }
@@ -79,6 +89,11 @@
 @media (max-width: 480px) {
     .nav-con{
         display: none;
+    }
+    .navbar-brand{
+        height: 80px;
+        width: 100px;
+        margin-left: 20px;
     }
     .navbar-toggler{
         padding: 0px 0px 0px 0px;

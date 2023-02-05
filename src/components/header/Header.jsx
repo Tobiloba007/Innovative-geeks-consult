@@ -3,6 +3,7 @@ import './header.css'
 import { motion } from 'framer-motion'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { Link } from 'react-router-dom'
+import Logo from '../../assets/logo.jpeg'
 
 
 const Header = () => {
@@ -10,7 +11,7 @@ const Header = () => {
     <div className='nav-wrapper'>
     <div className='nav-con'>  
         <div className="header-left">
-            <h1>GEEKS LOGO</h1>
+             <img className='nav-logo' src={Logo} alt="lLogo" />
         </div>
         <div className="header-right">
             <Link to='/' className='nav-links'>HOME</Link>
@@ -35,7 +36,7 @@ const Header = () => {
 <div className='boot-nav'>
                  <nav class="navbar  navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">GEEKS LOGO</a>
+    <img className='navbar-brand' src={Logo} alt="lLogo" />
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"><RxHamburgerMenu /></span>
     </button>
