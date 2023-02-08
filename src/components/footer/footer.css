@@ -34,6 +34,10 @@
     justify-content: space-between;
     font-size: 90px;
 }
+.footer-social-links{
+    text-decoration: none;
+    color: inherit;
+}
 .footer-socials-li{
     padding: 0px 30px;
 }

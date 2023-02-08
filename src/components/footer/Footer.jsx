@@ -14,9 +14,9 @@ const Footer = () => {
         <div className="address">
             <p className='footer-title'>ADDRESS</p>
             <ul className='footer-li-div'>
-                <li>12, Mawamiwale Street, off Mio <br /> sinile busstop, ilakoji, illaro.</li>
-                <li>+234 7054790081</li>
-                <li>+234 2023456789</li>
+                <li>67 adjacent Olarem filling station, <br /> Basorun ibadan oyo state.</li>
+                <li>+234 811 7300 983</li>
+                <li>+234 816 4913 064</li>
             </ul>
         </div>
         <div className="links">
@@ -31,10 +31,10 @@ const Footer = () => {
         <div className="socials">
             <p className='footer-title title-socials'>SOCIALS</p>
             <div className='footer-socials'>
-            <FaWhatsapp className='footer-socials-li' />
-            <AiFillFacebook className='footer-socials-li' />
-            <BsInstagram className='footer-socials-li' />
-            <IoLogoTwitter className='footer-socials-li' />
+            <a className='footer-social-links' href="https://wa.me/message/2IFPXCLV5O36A1" target="_blank" rel="noreferrer"><FaWhatsapp className='footer-socials-li' /></a>
+            <a className='footer-social-links' href="https://www.facebook.com/profile.php?id=100063643676480&mibextid=ZbWKwL" target="_blank" rel="noreferrer"><AiFillFacebook className='footer-socials-li' /></a>
+            <a className='footer-social-links' href="https://www.instagram.com/invites/contact/?i=10qkgzzkz0s6j&utm_content=nxoya3o" target="_blank" rel="noreferrer"><BsInstagram className='footer-socials-li' /></a>
+            <a className='footer-social-links' href="https://twitter.com/innovative_gc?t=BdC7kFdJB7Qe2cCTZ9wt1A&s=08" target="_blank" rel="noreferrer"><IoLogoTwitter className='footer-socials-li' /></a>
             </div>
         </div>
     </div>

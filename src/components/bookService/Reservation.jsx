@@ -1,4 +1,6 @@
 import React from 'react'
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { Link } from 'react-router-dom'
 import Footer from '../footer/Footer'
 import Header from '../header/Header'
@@ -7,6 +9,23 @@ import { BsPhoneVibrateFill } from 'react-icons/bs'
 import { IoLogoWhatsapp } from 'react-icons/io5'
 
 const Reservation = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_7f78ya9', 'template_s3f08po', form.current, 'hOky1WXI3jMpeCzkR')
+
+      .then((result) => {
+          console.log(result.text);
+          console.log("message sent");
+          e.target.reset();
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <div>
          <Header />
@@ -37,15 +56,24 @@ const Reservation = () => {
             <div className="book-main-right">
             <div className="book-main-right-border">
              <h1 className='book-main-right-title'>Book A Service</h1>
-            <form className='book-form'>
-              <input className='book-input' type="name" placeholder='Full Name' />
-              <input className='book-input' type="email" placeholder='Email' />
-              <input className='book-input' type="number" placeholder='Phone' />
-              <input className='book-input' type="text" placeholder='subjecct' />
-              <input className='book-input' type="text" placeholder='subjecct' />
-              <textarea className='book-input-message' placeholder='Message' name="text" rows="7"></textarea>
-              <button className='book-btn'>Book Now</button>
+
+            <form ref={form} className='book-form' onSubmit={sendEmail}>
+              <input className='book-input' type="text" name="user_name" placeholder='Full Name' />
+              <input className='book-input' type="email" name="user_email" placeholder='Email' />
+              <input className='book-input' type="number" name='user_phone' placeholder='Phone' />
+              <select className='book-input select-input' name="user_service">
+                <option value="Study visa">Immigration Services</option>
+                <option value="Immigration">Study Abroad</option>
+                <option value="Immigration">Visa Counseling</option>
+                <option value="Ticketting">Ticketting</option>
+                <option value="Ticketting">Hotel Reservation</option>
+                <option value="Ticketting">Travel and Tour</option>
+              </select>
+              <input className='book-input' type="text" name='user_subject' placeholder='subject' />
+              <textarea className='book-input-message' placeholder='Message' name="message" rows="7"></textarea>
+              <button className='book-btn' type="submit">Book Now</button>
             </form>
+
             </div>
             <div className='book-main-right-bottom'>
                 <img className='book-main-right-bottom-img'
@@ -54,10 +82,15 @@ const Reservation = () => {
                     <h1 className='book-main-right-bottom-content-title'>Any Question ?</h1>
                     <p className='book-main-right-bottom-content-1'>if you require additional information on Tours, Visa Counseling, Immigration, Ticketing, Hotel Reservation and more; Kindly Contact Us:</p>
                     <p className='book-main-right-bottom-content-2'>
-                       <BsPhoneVibrateFill className='bottom-content-icon' /> +234 7034 5433
+                       <BsPhoneVibrateFill className='bottom-content-icon' /> +234 816 4913 064
                     </p>
-                    <p className='book-main-right-bottom-content-3'>
+                    <p  className='book-main-right-bottom-content-3'>
+                    <a className='book-main-right-bottom-content-link' 
+                    href='https://wa.me/message/2IFPXCLV5O36A1'
+                    target="_blank" rel="noreferrer"
+                    >
                        <IoLogoWhatsapp className='bottom-content-icon' />  Chat With Chucks
+                    </a>
                     </p>
                 </div>
             </div>

@@ -92,6 +92,7 @@
     width: 25rem;
     height: 70px;
     margin: 12px 0px;
+    padding-left: 15px;
     background-color: rgb(237, 248, 237);
     border-radius: 7px;
     border: none;
@@ -103,6 +104,8 @@
 .book-input-message{
     width: 25rem;
     margin: 15px 0px;
+    padding-left: 15px;
+    padding-top: 10px;
     background-color: rgb(237, 248, 237);
     border-radius: 7px;
     border: none;
@@ -155,6 +158,10 @@
     text-align: center;
     margin-top: -20px;
     font-weight: 500;
+}
+.book-main-right-bottom-content-link{
+    text-decoration: none;
+    color: #fff;
 }
 .bottom-content-icon{
     font-size: 57px;
