@@ -1,10 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./aboutIntro.css"
 import { GiBullseye } from 'react-icons/gi'
 import { FcBinoculars } from 'react-icons/fc'
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../../firebase-config'
 
 const AboutIntro = () => {
+    const [content, setContent] = useState([]);
+
+    const collectionRef = collection(db, "content")
+    
+    useEffect(() => {
+      const getContent = async () => {
+        const data = await getDocs(collectionRef)
+        console.log(data);
+        setContent(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      }
+  
+      getContent();
+    },[])
+
   return (
+    <div>
+    {content.map((about) => {
+      return(
     <div className='aboutIntro-con'>
         <div className='aboutIntro-img'>
             <img className='aboutIntro-img'
@@ -16,7 +35,7 @@ const AboutIntro = () => {
         </div>
         <div className="aboutIntro-div-1">
             <p className='aboutIntro-words'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, fugit! Vero fuga id saepe officiis ex temporibus veniam nisi labore! Libero, quaerat. Facere officiis illo perspiciatis accusamus nesciunt, voluptatibus adipisci.
+                {about.abIntro}
             </p>
         </div>
 
@@ -25,7 +44,7 @@ const AboutIntro = () => {
                 <h2 className='mission-title'>OUR MISSION<GiBullseye className='mission-icon' /></h2>
                 <div className="mission">
                     <p className='mission-words'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio officiis molestias, dicta placeat quibusdam delectus minima eius doloremque veritatis et ad nesciunt possimus quaerat aliquam perferendis. Animi maxime placeat, quo quaerat dolor harum impedit, quidem at error qui velit necessitatibus.
+                    {about.abMission}
                     </p>
                 </div>
             </div>
@@ -35,12 +54,15 @@ const AboutIntro = () => {
                 <h2 className='mission-title'>OUR VISION<FcBinoculars className='mission-icon' /></h2>
                 <div className="mission">
                     <p className='mission-words'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio officiis molestias, dicta placeat quibusdam delectus minima eius doloremque veritatis et ad nesciunt possimus quaerat aliquam perferendis. Animi maxime placeat, quo quaerat dolor harum impedit, quidem at error qui velit necessitatibus.
+                    {about.abVision}
                     </p>
                 </div>
             </div>
         </div>
     </div>
+     ) 
+    })}
+  </div>
   )
 }
 

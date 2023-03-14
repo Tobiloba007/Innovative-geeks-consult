@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './contact.css'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
@@ -10,8 +10,24 @@ import { BsInstagram } from 'react-icons/bs'
 import { FcGoogle } from 'react-icons/fc'
 import { ImWhatsapp } from 'react-icons/im'
 import { SiTwitter } from 'react-icons/si'
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase-config';
 
 const Contact = () => {
+  const [content, setContent] = useState([]);
+
+  const collectionRef = collection(db, "content")
+  
+  useEffect(() => {
+    const getContent = async () => {
+      const data = await getDocs(collectionRef)
+      console.log(data);
+      setContent(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    }
+
+    getContent();
+  },[])
+
 
   const form = useRef();
 
@@ -31,6 +47,9 @@ const Contact = () => {
 
   return (
     <div>
+        {content.map((contacts)=>{
+          return(
+    <div>
       <div className="contact-intro-img">
         <img className='contact-intro-img'
         src="https://images.unsplash.com/photo-1562321604-44a63bafb358?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fEFpcnBsYW5lJTIwd2luZ3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" />
@@ -46,41 +65,39 @@ const Contact = () => {
         <div className="contact-main-div">
           <MdLocationOn className='contact-main-icon' />
           <h1 className='contact-card-title'>Innovative Geeks Consults Ltd.</h1>
-          <p className='contact-card-words'>67 Adjacent Olarem Filling Station, Basorun Ibadan Oyo State.</p>
+          <p className='contact-card-words'>{contacts.address}</p>
         </div>
         <div className="contact-main-div">
           <FaPhone className='contact-main-icon' />
           <h1 className='contact-card-title'>Telephone</h1>
-          <p className='contact-card-words'>+234 811 7300 983 <br /> +234 816 4913 064</p>
+          <p className='contact-card-words'>{contacts.phone1}<br /> {contacts.phone2}</p>
         </div>
         <div className="contact-main-div">
           <MdEmail className='contact-main-icon' />
           <h1 className='contact-card-title'>Business Inquiries</h1>
-          <p className='contact-card-words info-email'>Innovativegeeksconsults@gmail.com</p>
+          <p className='contact-card-words info-email'>{contacts.gmail}</p>
         </div>
         </div>
+
 
         <div className="contact-main-bottom">
           <h1 className='contact-main-bottom-title'>Get In Touch</h1>
           <div className='contact-main-bottom-icons'>
-            <a href="https://www.facebook.com/profile.php?id=100063643676480&mibextid=ZbWKwL"
+            <a href={contacts.facebook}
             target="_blank" without rel="noreferrer"
             ><GrFacebookOption className='contact-main-bottom-socials icon-1' /></a>
 
-            <a href="https://www.instagram.com/invites/contact/?i=10qkgzzkz0s6j&utm_content=nxoya3o"
+            <a href={contacts.instagram}
             target="_blank" without rel="noreferrer"
             > <BsInstagram className='contact-main-bottom-socials icon-2' /></a>
 
-            {/* <a href="#" */}
-            {/* target="_blank" without rel="noreferrer"> */}
             <FcGoogle className='contact-main-bottom-socials icon-3' />
-            {/* </a> */}
 
-            <a href="https://wa.me/message/2IFPXCLV5O36A1"
+            <a href={contacts.whatsapp}
             target="_blank" without rel="noreferrer"
             ><ImWhatsapp className='contact-main-bottom-socials icon-4' /></a>
 
-            <a href="https://twitter.com/innovative_gc?t=BdC7kFdJB7Qe2cCTZ9wt1A&s=08"
+            <a href={contacts.twitter}
             target="_blank" without rel="noreferrer"
             ><SiTwitter className='contact-main-bottom-socials icon-5' /></a>
 
@@ -110,8 +127,10 @@ const Contact = () => {
            </div>
         </div>
       </div>
-
     </div>
+    )
+  })}
+</div>
   )
 }
 

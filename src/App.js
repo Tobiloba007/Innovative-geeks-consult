@@ -10,6 +10,11 @@ import Visa from './components/bookService/Visa';
 import Ticketing from './components/bookService/Ticketing';
 import Reservation from './components/bookService/Reservation';
 import Travel from './components/bookService/Travel';
+import Admin from './Admin/Admin';
+import AdminAbout from './Admin/AdminAbout';
+import AdminServices from './Admin/AdminServices';
+import AdminContacts from './Admin/AdminContacts';
+import AdminHome from './Admin/AdminHome';
 
 function App() {
   return (
@@ -28,6 +33,12 @@ function App() {
       <Route path='/ticketing' element={<Ticketing />} />
       <Route path='/reservation' element={<Reservation />} />
       <Route path='/travel' element={<Travel />} />
+
+      <Route path='/admin' element={<Admin />} />
+      <Route path='/admin-home' element={<AdminHome />} />
+      <Route path='/admin-about' element={<AdminAbout />} />
+      <Route path='/admin-services' element={<AdminServices />} />
+      <Route path='/admin-contacts' element={<AdminContacts />} />
       
     </Routes>
     </BrowserRouter>

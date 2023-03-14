@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './section2.css'
 import img1 from '../../assets/services1.jpg'
 import img2 from '../../assets/services2.jpg'
@@ -8,14 +8,33 @@ import img5 from '../../assets/services5.jpg'
 import img6 from '../../assets/services6.jpg'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../../firebase-config'
 
 
 const Section2 = () => {
+  const [content, setContent] = useState([]);
+
+  const collectionRef = collection(db, "content")
+  
+  useEffect(() => {
+    const getContent = async () => {
+      const data = await getDocs(collectionRef)
+      console.log(data);
+      setContent(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    }
+
+    getContent();
+  },[])
+
   return (
     <div>
+      {content.map((content) => {
+        return(
+    <div>
         <div className="sec2-header">
-            <h1 className='sec2-header1'>All Services In One</h1>
-            <p className='sec2-header2'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum labore aliquid, facilis veniam ipsa provident nam similique perferendis vero maxime doloremque at sed odio, repudiandae reprehenderit totam aliquam! Obcaecati reiciendis eligendi nesciunt error dolorum enim quibusdam nisi deserunt fugit cupiditate nulla repellendus distinctio, reprehenderit quia eveniet omnis quasi facilis voluptatum?</p>
+            <h1 className='sec2-header1'>{content.sec2Title}</h1>
+            <p className='sec2-header2'>{content.sec2Para}</p>
         </div>
                   {/* C A R D S */}
         <div className="sec2-cards">
@@ -33,8 +52,8 @@ const Section2 = () => {
                 alt="..."
                 />
                  <div className='card-btm'>
-                <h5 className='card-title'>Holiday packages</h5>
-                <p className='card-words'>Some quick example text to build on the card title</p>
+                <h5 className='card-title'>{content.sec2CardTitle1}</h5>
+                <p className='card-words'>{content.sec2CardText1}</p>
                 <motion.button
                  whileHover={{
                     scale: 1.05,
@@ -61,8 +80,8 @@ const Section2 = () => {
                 alt="..."
                 />
                 <div className='card-btm'>
-                <h5 className='card-title'>Holiday packages</h5>
-                <p className='card-words'>Some quick example text to build on the card title</p>
+                <h5 className='card-title'>{content.sec2CardTitle2}</h5>
+                <p className='card-words'>{content.sec2CardText2}</p>
                 <motion.button 
                 whileHover={{
                     scale: 1.05,
@@ -87,8 +106,8 @@ const Section2 = () => {
                 alt="..."
                 />
                  <div className='card-btm'>
-                <h5 className='card-title'>Holiday packages</h5>
-                <p className='card-words'>Some quick example text to build on the card title</p>
+                <h5 className='card-title'>{content.sec2CardTitle3}</h5>
+                <p className='card-words'>{content.sec2CardText3}</p>
                 <motion.button 
                 whileHover={{
                     scale: 1.05,
@@ -100,7 +119,7 @@ const Section2 = () => {
                 </div>
             </motion.div>
 
-            <motion.div 
+            {/* <motion.div 
             whileHover={{
                 scale: 1.05,
                 transition: { duration: 0.4 },
@@ -124,9 +143,9 @@ const Section2 = () => {
                  LEARN MORE
              </Link></motion.button>
                 </div>
-            </motion.div>
+            </motion.div> */}
 
-            <motion.div
+            {/* <motion.div
             whileHover={{
                 scale: 1.05,
                 transition: { duration: 0.4 },
@@ -150,9 +169,9 @@ const Section2 = () => {
                 LEARN MORE
             </Link></motion.button>
                 </div>
-            </motion.div>
+            </motion.div> */}
 
-            <motion.div 
+            {/* <motion.div 
             whileHover={{
                 scale: 1.05,
                 transition: { duration: 0.4 },
@@ -176,9 +195,11 @@ const Section2 = () => {
                  LEARN MORE
              </Link></motion.button>
                 </div>
-            </motion.div>
-
+            </motion.div> */}
         </div>
+    </div>
+        ) 
+      })}
     </div>
   )
 }

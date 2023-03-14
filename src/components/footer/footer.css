@@ -21,6 +21,9 @@
     font-size: 18px;
     line-height: 40px;
 }
+.footer-address-address{
+    width: 17rem;
+}
 .link-list{
     text-decoration: none;
     color: #ffff;
@@ -96,6 +99,9 @@
     .footer-socials-li{
         padding: 0px 12px;
     }
+    .footer-address-address{
+        width: 14rem;
+    }
     .footer-bumbum{
         display: flex;
         align-items: center;
@@ -150,6 +156,9 @@
     }
     .footer-socials-li{
         padding: 0px 18px;
+    }
+    .footer-address-address{
+        width: 10rem;
     }
     .footer-bumbum{
         display: flex;

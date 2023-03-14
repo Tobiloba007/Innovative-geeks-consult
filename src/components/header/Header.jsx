@@ -1,14 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './header.css'
 import { motion } from 'framer-motion'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { Link } from 'react-router-dom'
 import Logo from '../../assets/logo.jpeg'
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../../firebase-config'
 
 
 const Header = () => {
 
+  const [content, setContent] = useState([]);
+
+  const collectionRef = collection(db, "content")
+  
+  useEffect(() => {
+    const getContent = async () => {
+      const data = await getDocs(collectionRef)
+      console.log(data);
+      setContent(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    }
+
+    getContent();
+  },[])
+
   return (
+    <div>
+       {content.map((header)=>{
+         return(
     <div className='nav-wrapper'>
     <div className='nav-con'>  
         <div className="header-left">
@@ -20,7 +39,7 @@ const Header = () => {
             <Link to='/' className='nav-links'>HOME</Link>
             <Link to='/about' className='nav-links'>ABOUT US</Link>
             <Link to='/services' className='nav-links'>SERVICES</Link>
-            <a href='https://medium.com/' target="_blank" rel="noreferrer" className='nav-links'>BLOG</a>
+            <a href={header.medium} target="_blank" rel="noreferrer" className='nav-links'>BLOG</a>
             <motion.button 
              whileHover={{
               scale: 1.1,
@@ -60,7 +79,7 @@ const Header = () => {
           <hr className='hr-line'/>
         </li>
         <li className="nav-item">
-        <a href='https://medium.com/' target="_blank" rel="noreferrer" className='nav-link'>BLOG</a>
+        <a href={header.medium} target="_blank" rel="noreferrer" className='nav-link'>BLOG</a>
         <hr className='hr-line'/>
         </li>
         <li className="nav-item">
@@ -77,6 +96,9 @@ const Header = () => {
 </div>
 
     </div>
+      )
+    })}
+</div>
   )
 }
 
