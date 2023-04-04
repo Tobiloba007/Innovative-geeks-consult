@@ -15,6 +15,7 @@ import AdminAbout from './Admin/AdminAbout';
 import AdminServices from './Admin/AdminServices';
 import AdminContacts from './Admin/AdminContacts';
 import AdminHome from './Admin/AdminHome';
+import AdminImages from './Admin/AdminImages';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
       <Route path='/admin-about' element={<AdminAbout />} />
       <Route path='/admin-services' element={<AdminServices />} />
       <Route path='/admin-contacts' element={<AdminContacts />} />
+      <Route path='/admin-images' element={<AdminImages />} />
       
     </Routes>
     </BrowserRouter>
