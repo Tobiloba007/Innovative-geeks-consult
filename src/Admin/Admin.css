@@ -71,6 +71,9 @@
     border-radius: 5px;
     margin: 0px 10px;
 }
+.update-btn:focus{
+    background-color: rgb(81, 81, 190);
+}
 .delete-btn{
     text-align: center;
     width: 6rem;
